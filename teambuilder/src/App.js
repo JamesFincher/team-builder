@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 import Form from './Form';
+import ShowList from './ShowList';
 
 function App() {
   const initFormValues = {
@@ -47,6 +48,7 @@ function App() {
         handleSubmit={handleSubmit}
         updateFormValues={updateFormValues}
       />
+      <ShowList teamList={teamList} />
     </div>
   );
 }
