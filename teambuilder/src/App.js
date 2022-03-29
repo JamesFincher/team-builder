@@ -3,6 +3,7 @@ import './App.css';
 import React, { useState } from 'react';
 import Form from './Form';
 import ShowList from './ShowList';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const initFormValues = {
