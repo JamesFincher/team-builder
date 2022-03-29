@@ -15,9 +15,23 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setTeamList([...teamList, formValues]);
-    setFormValues(initFormValues);
-    console.table(teamList);
+    const newTeamMember = {
+      name: formValues.name.trim,
+      email: formValues.email.trim,
+      role: formValues.role,
+    };
+
+    if (
+      newTeamMember.name === '' ||
+      newTeamMember.email === '' ||
+      newTeamMember.role === ''
+    ) {
+      alert('Please fill out all fields');
+    } else {
+      setTeamList([...teamList, formValues]);
+      setFormValues(initFormValues);
+      console.table(teamList);
+    }
   };
 
   const updateFormValues = (inputName, inputValue) => {
